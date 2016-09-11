@@ -2,7 +2,7 @@
 <package>
   <name>linorobot_ackermann</name>
   <version>1.0.0</version>
-  <description>4WD differential drive ROS platform</description>
+  <description>Ackermann Steering ROS Platform</description>
   <maintainer email="jimenojmm@gmail.com">t</maintainer>
   <license>BSD</license>
 

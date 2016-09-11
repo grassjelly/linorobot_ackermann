@@ -5,20 +5,14 @@
       <param name="frame_id" value="laser"/>
     </node>
 
-    <!--<arg name="model"/>
-    <arg name="gui" default="false"/>
-    <param name="robot_description" textfile="$(find linorobot4wd)/urdf/linorobot4wd.urdf"/>
-    <param name="use_gui" value="False"/>
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>-->
-    
-    <node name="base_laser_tf_broadcaster_node" pkg="linorobot4wd" type="base_laser_tf_4wd"/> 
+    <node name="base_laser_tf_broadcaster_node" pkg="linorobot_ackermann" type="base_laser_tf_ackermann"/> 
 
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
         <param name="base_frame" value="/base_link" />
         <param name="odom_frame" value="/odom" />
         <param name="map_update_interval" value="15.0"/>
         <param name="maxUrange" value="5.0"/>
-	    <param name="minRange" value="-0.5"/>
+	<param name="minRange" value="-0.5"/>
         <param name="sigma" value="0.05"/>
         <param name="kernelSize" value="1"/>
         <param name="lstep" value="0.05"/>
