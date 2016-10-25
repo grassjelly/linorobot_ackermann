@@ -203,9 +203,9 @@ void loop()
   {
     if ((millis() - previous_debug_time) >= (1000 / DEBUG_RATE))
     {
-      sprintf (buffer, "Encoder FrontLeft: %ld", motor1_encoder.read());
+      sprintf (buffer, "Encoder Rear Left: %ld", motor1_encoder.read());
       nh.loginfo(buffer);
-      sprintf (buffer, "Encoder FrontRight: %ld", motor2_encoder.read());
+      sprintf (buffer, "Encoder Rear Right: %ld", motor2_encoder.read());
       nh.loginfo(buffer);
       previous_debug_time = millis();
     }
