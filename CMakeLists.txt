@@ -33,6 +33,3 @@ include_directories(
 
 add_executable(lino_base_node_ackermann src/lino_base_node_ackermann.cpp)
 target_link_libraries(lino_base_node_ackermann ${catkin_LIBRARIES})
-
-add_executable(base_laser_tf_ackermann src/base_laser_tf_ackermann.cpp)
-target_link_libraries(base_laser_tf_ackermann ${catkin_LIBRARIES})
