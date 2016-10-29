@@ -172,7 +172,7 @@ void loop()
     //left side
     motor1.required_rpm = linear_vel_mins / circumference;
     //right side
-    motor2.required_rpm = linear_vel_mins / circumference;
+    motor2.required_rpm = motor1.required_rpm;
   }
 
   //this block publishes velocity based on defined rate
