@@ -33,5 +33,5 @@ const float WHEEL_DIAMETER = 0.135; //wheel's diameter in meters
 #define MOTOR2_IN_A 13
 #define MOTOR2_IN_B 12
 
-#define STEERING_PIN 21
+#define STEERING_PIN 20
 #endif
