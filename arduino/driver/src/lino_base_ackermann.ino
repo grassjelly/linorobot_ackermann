@@ -270,11 +270,8 @@ void stop_base()
 {
   steering_servo.write(90);
 
-  motor1.required_rpm = 0;
-  motor2.required_rpm = 0;
-
-  motor1.spin(0);
-  motor2.spin(0);
+  motor1.stop();
+  motor2.stop();
 }
 
 void publish_linear_velocity()
