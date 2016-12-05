@@ -259,8 +259,8 @@ void stop_base()
 {
   steering_servo.write(90);
 
-  motor1.stop();
-  motor2.stop();
+  required_linear_vel = 0;
+  required_steering_angle = 0;
 }
 
 void publish_linear_velocity()
