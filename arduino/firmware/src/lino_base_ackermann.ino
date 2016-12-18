@@ -231,8 +231,8 @@ void steer()
 {
     float steering_angle;
     float steering_angle_deg;
-    float required_steering_angle = g_req_angular_vel_z;
-    steering_angle_deg = required_steering_angle * (180 / PI);
+    float req_steering_angle = g_req_angular_vel_z;
+    steering_angle_deg = req_steering_angle * (180 / PI);
     if(steering_angle_deg > 0)
     {
         steering_angle = mapFloat(steering_angle_deg, 0, 90, 90, 0);
