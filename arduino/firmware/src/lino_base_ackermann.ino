@@ -218,7 +218,7 @@ void moveBase()
 {
   Kinematics::output req_rpm;
   //get the required rpm for each motor based on required velocities
-  req_rpm = kinematics.getRPM(g_req_linear_vel_x, 0.0, g_req_angular_vel_z);
+  req_rpm = kinematics.getRPM(g_req_linear_vel_x, 0.0, 0.0);
 
   //the required rpm is capped at -/+ MAX_RPM to prevent the PID from having too much error
   //the PWM value sent to the motor driver is the calculated PID based on required RPM vs measured RPM
@@ -252,8 +252,8 @@ void steer()
 void stopBase()
 {
   steering_servo.write(90);
-  g_req_linear_vel_x = 0;
-  g_req_angular_vel_z = 0;
+  g_req_linear_vel_x = 0.0;
+  g_req_angular_vel_z = 0.0;
 }
 
 void publishLinearVelocity()
@@ -267,7 +267,7 @@ void publishLinearVelocity()
 
   //fill in the object
   raw_vel_msg.linear_x = vel.linear_x;
-  raw_vel_msg.linear_x = 0.0;
+  raw_vel_msg.linear_y = 0.0;
   raw_vel_msg.angular_z = vel.angular_z;
 
   //publish raw_vel_msg object to ROS
