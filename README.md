@@ -1,4 +1,4 @@
-# Linorobot
+# [ This is no longer maintained. Updated repo here: https://github.com/linorobot/linorobot]
 
 An Ackerman Steering base for Linorobot series.
 
